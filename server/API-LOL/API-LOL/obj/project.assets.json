@@ -428,26 +428,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "/Users/jesusenriquez/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\lol-in-a-nutshell\\server\\API-LOL\\API-LOL\\API-LOL.csproj",
+      "projectUniqueName": "/Users/jesusenriquez/lol-in-a-nutshell/server/API-LOL/API-LOL/API-LOL.csproj",
       "projectName": "API-LOL",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\lol-in-a-nutshell\\server\\API-LOL\\API-LOL\\API-LOL.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\lol-in-a-nutshell\\server\\API-LOL\\API-LOL\\obj\\",
+      "projectPath": "/Users/jesusenriquez/lol-in-a-nutshell/server/API-LOL/API-LOL/API-LOL.csproj",
+      "packagesPath": "/Users/jesusenriquez/.nuget/packages/",
+      "outputPath": "/Users/jesusenriquez/lol-in-a-nutshell/server/API-LOL/API-LOL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jesusenriquez/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -490,7 +488,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
