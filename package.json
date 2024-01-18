@@ -1,0 +1,15 @@
+{
+  "name": "lol-in-a-nutshell",
+  "version": "1.0.0",
+  "description": "Aplicacion web para mostrar datos del lol :v",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server/LOL-API && dotnet run --launch-profile https"
+  },
+  "keywords": [
+    "react",
+    "ASP.NET"
+  ],
+  "author": "",
+  "license": "ISC"
+}
