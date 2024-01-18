@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LOL-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a489bb5951fbad40fc77aeebde3d0defaff2a05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505d860aef5452428399a36069264cee44a6183e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LOL-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LOL-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
