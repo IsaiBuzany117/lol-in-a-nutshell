@@ -35,7 +35,7 @@ namespace LOL_API.Controllers
                     }
                     catch (System.Exception)
                     {
-                        resp = @"{""message"": ""No se pudo encontrar la propiedad""}";
+                        resp = @"{""message"": ""No se pudo encontrar el item""}";
                         
                     }
 
@@ -63,9 +63,20 @@ namespace LOL_API.Controllers
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    var data = await responseMessage.Content.ReadAsStringAsync();
+                    var data = await responseMessage.Content.ReadFromJsonAsync<Items>();
 
-                    return Ok(data);
+                    string resp;
+                    try
+                    {
+                        resp = data.ExtensionData["data"].ToString();
+                    }
+                    catch (System.Exception)
+                    {
+                        resp = @"{""message"": ""No se encontro la data de los items""}";
+                        
+                    }
+
+                    return Ok(resp);
                 }
                 else
                 {
