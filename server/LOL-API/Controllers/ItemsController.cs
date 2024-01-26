@@ -27,8 +27,8 @@ namespace LOL_API.Controllers
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var data = await responseMessage.Content.ReadFromJsonAsync<Items>();
-
                     string resp;
+
                     try
                     {
                         resp = data.ExtensionData["data"].GetProperty(item).ToString();
@@ -63,20 +63,27 @@ namespace LOL_API.Controllers
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    var data = await responseMessage.Content.ReadFromJsonAsync<Items>();
-
-                    string resp;
+                    var items = await responseMessage.Content.ReadFromJsonAsync<Items>();
+                    List<ItemData> ourJsonFormat = new ();
+                    ItemData aux = new ();
                     try
                     {
-                        resp = data.ExtensionData["data"].ToString();
+                        var data = items.ExtensionData["data"].Clone();
+
+                        foreach (var item in data.EnumerateObject())
+                        {
+                            aux = JsonSerializer.Deserialize<ItemData>(item.Value);
+                            aux.id = item.Name;
+                            ourJsonFormat.Add(aux);
+                        }
+
+                        return Ok(ourJsonFormat);
                     }
                     catch (System.Exception)
                     {
-                        resp = @"{""message"": ""No se encontro la data de los items""}";
-                        
+                       return BadRequest();
                     }
 
-                    return Ok(resp);
                 }
                 else
                 {

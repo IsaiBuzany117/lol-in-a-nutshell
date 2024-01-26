@@ -16,4 +16,23 @@ namespace LOL_API.Models
         [JsonExtensionData]
         public Dictionary<string, JsonElement>? ExtensionData { get; set; }
     }
+
+    public class ItemData
+{
+    public string? id { get; set; }
+    public string? name { get; set; }
+    public string? plaintext { get; set; }
+    public Img? image { get; set; }
+}
+
+public class Img
+{
+    public string? full { get; set; }
+    public string? sprite { get; set; }
+    public string? group { get; set; }
+    public int x { get; set; }
+    public int y { get; set; }
+    public int w { get; set; }
+    public int h { get; set; }
+}
 }
