@@ -52,5 +52,31 @@ namespace LOL_API.Controllers
                 return StatusCode(500, $"Error en la solicitud HTTP: {ex.Message}");
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> GetItems()
+        {
+            string url = "https://ddragon.leagueoflegends.com/cdn/14.2.1/data/es_MX/item.json";
+
+            try
+            {
+                HttpResponseMessage responseMessage = await _httpClient.GetAsync(url);
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    var data = await responseMessage.Content.ReadAsStringAsync();
+
+                    return Ok(data);
+                }
+                else
+                {
+                    // Agrega un manejo para el caso en que la solicitud no sea exitosa
+                    return StatusCode((int)responseMessage.StatusCode, "Error en la solicitud HTTP");
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(500, $"Error en la solicitud HTTP: {ex.Message}");
+            }
+        }
     }
 }
